@@ -1,0 +1,25 @@
+<header class="mb-1 w-full">    
+    <app-header></app-header>
+</header>
+<div>
+    <app-banner></app-banner>
+</div>
+<div class="flex">
+    <div class="absolute ml-16 mt-[-100px]">
+        <app-profile></app-profile>
+        <app-profile-info></app-profile-info>
+    </div>
+    <div class="flex flex-col items-center justify-center container mx-auto">
+        <app-profile-stats></app-profile-stats>
+        <app-info-post></app-info-post>
+        <app-new-post></app-new-post>
+    </div>
+</div>
+<div class="flex flex-col items-center justify-center container mx-auto" *ngFor="let tw of tweets">
+    <app-tweet [TweetMessage]=tw></app-tweet>
+</div>
+
+<footer class="fixed bottom-0 m-auto w-full bg-blue-400">
+    <app-footer></app-footer>
+    <app-author></app-author>
+</footer>
